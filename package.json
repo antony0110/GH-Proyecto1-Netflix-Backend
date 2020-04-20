@@ -1,0 +1,28 @@
+{
+  "name": "GH-Proyecto1-Netflix-Backend",
+  "version": "1.0.0",
+  "description": "ClassicNetflixBackend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antony0110/GH-Proyecto1-Netflix-Backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/antony0110/GH-Proyecto1-Netflix-Backend/issues"
+  },
+  "homepage": "https://github.com/antony0110/GH-Proyecto1-Netflix-Backend#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0",
+    "node": "^13.13.0",
+    "sequelize": "^5.21.6",
+    "sequelize-cli": "^5.5.1"
+  }
+}
