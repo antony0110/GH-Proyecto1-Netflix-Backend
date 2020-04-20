@@ -31,6 +31,14 @@ const UserController={
             res.send(user)
           });
         })
-    }
-};
+    },
+    Profiles(req,res){
+            User.findAll()
+            .then(users => res.send(users))
+            .catch(err=>{
+                console.log(err)
+                res.status(500).send({message:'Ha habido un problema al cargar los usuarios'})
+            })
+        }
+    };
 module.exports=UserController;
