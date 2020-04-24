@@ -16,6 +16,24 @@ const MovieController={
         console.log(err)
         res.status(500).send({message:'Ha habido un problema al cargar las peliculas'})
     })
+},
+Genre(req,res){
+    let genre = req.query.genre;
+    Movie.findAll({ where: { genre: genre }}).then( Movie => {
+        res.json(Movie);
+    })
+},
+Actor(req,res){
+    let actor = req.query.actor;
+    Movie.findAll({ where: { actor: actor }}).then( Movie => {
+        res.json(Movie);
+    })
+},
+ Id(req, res) {
+    let id = req.params.id;
+    Movie.findAll({ where: { id: id }}).then( Movie => {
+        res.json(Movie);
+    });
 }
 };
 module.exports=MovieController;
