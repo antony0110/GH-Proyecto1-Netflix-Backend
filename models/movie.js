@@ -7,7 +7,8 @@ module.exports = (sequelize, DataTypes) => {
     image_path: DataTypes.STRING
   }, {});
   Movie.associate = function(models) {
-    // associations can be defined here
+     Movie.hasMany(models.Pedido)
+   //  associations can be defined here
   };
   return Movie;
 };

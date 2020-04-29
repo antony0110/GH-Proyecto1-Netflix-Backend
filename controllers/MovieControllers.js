@@ -1,8 +1,10 @@
 
-const {Movie} = require('../models/index')
+const {Movie,Pedido} = require('../models/index')
 const MovieController={
     movies(req,res){
-        Movie.findAll()
+        Movie.findAll({
+            include:[Pedido]
+        })
         .then(movies => res.send(movies))
         .catch(err=>{
             console.log(err)
@@ -37,8 +39,8 @@ actor(req,res){
 },
 title(req,res){
     let title = req.query.title;
-    Movie.findAll({ where: { title: title }}).then( title => {
-        res.json(title);
+    Movie.findAll({ where: { title: title }}).then( Movie => {
+        res.json(Movie);
     })
 }
 };

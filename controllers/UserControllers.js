@@ -1,4 +1,4 @@
-const { User,Token } = require('../models/index')
+const { User,Token,Pedido } = require('../models/index')
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken')
 const UserController={
@@ -35,15 +35,28 @@ const UserController={
           });
         })
     },
-    Profiles(req,res){
-            User.findAll({attributes: { exclude: ['password'] }})
-            .then(users => res.send(users))
-            .catch(err=>{
-                console.log(err)
-                res.status(500).send({message:'Ha habido un problema al cargar los usuarios'})
-            })
-        }
-    };
+Profiles(req,res){
+        User.findAll({attributes: { exclude: ['password']}},{include:[Pedido]})
+          .then(users => res.send(users))
+           .catch(err=>{
+               console.log(err)
+               res.status(500).send({message:'Ha habido un problema al cargar los usuarios'})
+          })
+   },
+   Id(req, res) {
+    let id = req.params.id;
+    User.findAll( {include:[Pedido]},{ where:{ id: id }})
+    .then( User => {
+        res.json(User);
+    })
+  }
+    //   Profile (req,res){
+     //     let username = req.query.username;
+     //     User.findAll({ where: { username: username }}).then( User => {
+//res.json(User);
+        //  });
+     //   }
+  };
 module.exports=UserController;
 
 
