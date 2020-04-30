@@ -45,47 +45,10 @@ Profiles(req,res){
    },
    Id(req, res) {
     let id = req.params.id;
-    User.findAll( {include:[Pedido]},{ where:{ id: id }})
+    User.findAll( { where:{ id: id }})
     .then( User => {
         res.json(User);
     })
   }
-    //   Profile (req,res){
-     //     let username = req.query.username;
-     //     User.findAll({ where: { username: username }}).then( User => {
-//res.json(User);
-        //  });
-     //   }
   };
 module.exports=UserController;
-
-
-//async login(req, res) {
-  //  try {
-    //    const user = await UserModel.findOne({ //buscamos el usuario por el email, ej: 'user@email.com'
-      //      email: req.body.email
-        ///});
-        //console.log(user)
-       // if(!user){
-       //    return res.status(400).send({message:'Wrong credentials'});
-     //   }
-        //const isMatch = await bcrypt.compare(req.body.password,user.password);
-      //  console.log(isMatch)
-    //    if(!isMatch){
-      //     return res.status(400).send({message:'Wrong credentials'});
-    //    }
-    //    const token = jwt.sign({"_id":"5e9ec482ebead138a00b8d32"}, 'mimamaMeMima' , {expiresIn:'2w'} );
-   //     if(user.tokens.length>4) user.tokens.shift();//si ya hay 5 tokens eliminamos el más antiguo
-     //   user.tokens.push(token);//añadimos el token al final del array
-   //     await user.save();//guarda los cambios en mongoDB
-      //  res.send({message:'Welcome Mr '+user.email,user,token});
- //   } catch (error) {
-        //console.error(error)
-    //    res.status(500).send({
-        //    message: 'There was a problem trying to log in'
-     //   })
-  //  }
-//}
-//}
-
-//module.exports = UserController;
