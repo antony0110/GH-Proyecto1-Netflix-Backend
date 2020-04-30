@@ -108,7 +108,7 @@ _En este proyecto hemos utilizado las siguientes tecnologias :_
 
 *  EXPRESS
 
-* MYSQL (sequelize Cli)
+*  MYSQL (sequelize Cli)
 
   
 
