@@ -85,15 +85,15 @@ _Y nos muestra las peliculas segun sus generos_
 
 
 ### Ahora vamos a hacer la prueba de los pedidos ⌨️
-![](./FotosReadme/Pedido.png)
+![](./FotosReadme/Pedidos.png)
 _En esta foto podemos ver como hacemos un pedido.
 Para acceder a este endpoint , tenemos que escribir en el buscador de postman la siguiente url: http://localhost:4000/Pedidos/Pedido/ y tiene que estar en POST._
 
-![](./FotosReadme/PedidoHecho.png)
+![](./FotosReadme/PedidoHechos.png)
 _Y aqui podemos ver como se creó el pedido._
 
 ### Ahora vamos a ver el pedido que hemos realizado ⌨️
-![](./FotosReadme/Compra.png)
+![](./FotosReadme/Compras.png)
 _En esta foto podemos ver como hacemos un pedido, vemos la pelicula que hemos alquilado y que usuario la ha alquilado
 Para acceder a este endpoint , tenemos que escribir en el buscador de postman la siguiente url: http://localhost:4000/Pedidos/Compras/ y tiene que estar en GET._
 
