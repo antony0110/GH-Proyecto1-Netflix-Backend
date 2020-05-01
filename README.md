@@ -81,7 +81,7 @@ _Y nos muestra las peliculas segun sus generos_
 
 ### Con la prueba que hemos hecho del filtro de genero, hacemos los mismo tanto si queremos filtrar por titulo y por actor, lo unico que cambia es la url, que son las siguientes:
 * Filtro por actor: http://localhost:4000/movie/Actors/?actor=Arnold Schwarzenegger (ponemos los actores que este en nuestra base de datos)
-* Filtro por actor: http://localhost:4000/movie/Title/?title=Dolor y Gloria (ponemos los titulos que este en nuestra base de datos)
+* Filtro por título : http://localhost:4000/movie/Title/?title=Dolor y Gloria (ponemos los titulos que este en nuestra base de datos)
 
 
 ### Ahora vamos a hacer la prueba de los pedidos ⌨️
