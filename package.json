@@ -4,7 +4,10 @@
   "description": "ClassicNetflixBackend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create:db": "sequelize db:create NOTFLEX4",
+    "db:migration": "sequelize db:migrate",
+    "start:watch": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,7 @@
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.1.0",
     "node": "^13.13.0",
+    "nodemon": "^2.0.3",
     "sequelize": "^5.21.6",
     "sequelize-cli": "^5.5.1"
   }

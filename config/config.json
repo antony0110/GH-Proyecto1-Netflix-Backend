@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "BackendClassicNetflix",
+    "password": "9637416257bB",
+    "database": "NOTFLEX4",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
